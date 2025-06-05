@@ -1,0 +1,75 @@
+.input_container {
+  display: flex;
+  padding: var(--input-padding, 8px 16px);
+  align-items: center;
+  gap: 4px;
+  align-self: stretch;
+  border-radius: var(--input-border-radius, 16px);
+  border: var(--input-border-width, 1px) var(--input-border-style, solid) var(--input-border-color, #17699D);
+  background: var(--input-bg-color, #FFF);
+  box-shadow: var(--input-box-shadow, 0px 1px 8px 0px rgba(3, 0, 138, 0.10));
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: var(--input-font-size, 16px);
+  color: var(--input-color, #333);
+  width: 100%;
+}
+
+.input::placeholder {
+  color: var(--input-placeholder-color, rgba(0, 0, 0, 0.50));
+  opacity: 1;
+}
+
+
+.input_container:has(input:disabled) {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.input_error {
+  border-color: var(--input-error-border-color, #ff4444) !important;
+}
+
+.input_success {
+  border-color: var(--input-success-border-color, #00c853) !important;
+}
+
+.input_fullWidth {
+  width: 100%;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  line-height: 0;
+  margin-top: -1px;
+}
+
+/* Стили для скроллбара */
+.input::-webkit-scrollbar {
+  width: 8px;
+}
+
+.input::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.input::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.input::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}

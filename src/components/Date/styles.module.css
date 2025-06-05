@@ -1,0 +1,39 @@
+.dateContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background: transparent;
+    color: #fff;
+    font-family: var(--font-Inter);
+}
+
+.arrowButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s;
+    padding: 0;
+}
+
+.arrowButton:hover {
+    opacity: 1;
+}
+
+.arrowButton img {
+    width: 24px;
+    height: 24px;
+}
+
+.dateRange {
+    text-align: center;
+    font-size: 24px;
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: 0.12px;
+}
