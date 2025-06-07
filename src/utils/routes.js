@@ -49,6 +49,11 @@ export const routes = [
     name: 'Settings',
     element: 'Settings',
   },
+  {
+    path: '/settings/sprint-duration',
+    name: 'SprintDuration',
+    element: 'SprintDuration',
+  },
   // {
   //   path: '/settings',
   //   name: 'Settings',

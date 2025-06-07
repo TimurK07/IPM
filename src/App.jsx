@@ -62,7 +62,7 @@ function AppContent() {
             .map(({ path, element }) => {
               const Component = pageComponents[element];
               // Список страниц, на которых не нужно показывать хедер
-              const pagesWithoutHeader = ['/mailing', '/group-chat', '/daily', '/tasks', '/users', '/database', '/link', '/document', '/settings', '/sprint-duration', '/daily-rating', '/notifications', '/daily-to-tasks'];
+              const pagesWithoutHeader = ['/mailing', '/group-chat', '/daily', '/tasks', '/users', '/database', '/link', '/document', '/settings', '/sprint-duration', '/daily-rating', '/notifications', '/daily-to-tasks', '/settings/sprint-duration'];
               const showHeader = !pagesWithoutHeader.includes(path);
 
               return Component ? (

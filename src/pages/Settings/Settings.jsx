@@ -5,12 +5,15 @@ import timeIcon from '../../assets/icons/time.svg'
 import starIcon from '../../assets/icons/star-2.svg'
 import infoIcon from '../../assets/icons/info.svg'
 import Calendar from '../../components/Calendar/Calendar'
+import { useNavigate } from 'react-router-dom'
 
 const Settings = () => {
     const [dailyToTasks, setDailyToTasks] = useState(true);
     const [notifications, setNotifications] = useState(false);
     const [showCalendar, setShowCalendar] = useState(false);
     const [sprintDuration, setSprintDuration] = useState('23.04-30.04');
+    
+    const navigate = useNavigate();
     
     const handleCalendarOpen = () => {
         setShowCalendar(true);
@@ -58,7 +61,7 @@ const Settings = () => {
                     <div className={styles.InputsWrapper}>
                         <div className={styles.InputWrapper}>
                             <label htmlFor="" className={styles.InputLabel}>Длительность спринта</label>
-                            <div style={{ position: 'relative' }} onClick={handleCalendarOpen}>
+                            <div style={{ position: 'relative' }} onClick={() => navigate('/settings/sprint-duration')}>
                                 <input 
                                     type="text" 
                                     value={sprintDuration}
